@@ -12,6 +12,11 @@
   <meta property="og:url" content="https://yourcustomgpt.io/">
   <link rel="canonical" href="https://yourcustomgpt.io/">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function showSuccessMessage() {
+      alert('Thank you! Your email app has opened. We will get back to you soon!');
+    }
+  </script>
 </head>
 <body class="bg-white text-gray-800">
 
@@ -125,7 +130,7 @@
         <li>Which package you're interested in (Starter, Pro, Enterprise)</li>
         <li>Any specific goals or questions you have</li>
       </ul>
-      <a href="mailto:rebecca.m.luxton@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded text-lg">Email Us</a>
+      <a href="mailto:rebecca.m.luxton@gmail.com" onclick="showSuccessMessage()" class="bg-blue-600 text-white px-6 py-3 rounded text-lg">Email Us</a>
     </section>
 
   </main>
