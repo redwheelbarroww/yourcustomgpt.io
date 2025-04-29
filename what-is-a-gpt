@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is a GPT? | YourCustomGPT.io</title>
+  <meta name="description" content="Learn what a GPT is, how it works, and why custom GPTs are the future of business automation. YourCustomGPT.io explains.">
+  <meta name="keywords" content="What is a GPT, GPT explained, Custom GPT, GPT for business, AI assistants">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<header class="p-6 bg-white shadow-md flex justify-between items-center">
+  <h1 class="text-2xl font-bold text-blue-700"><a href="/">YourCustomGPT.io</a></h1>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 py-16">
+
+  <h1 class="text-4xl font-bold mb-6">What is a GPT?</h1>
+
+  <p class="text-lg mb-8">A GPT (Generative Pre-trained Transformer) is an AI model designed to understand and generate human-like text. Businesses today are using custom GPTs as powerful assistants — trained on their specific content and workflows to handle customer support, internal processes, and more.</p>
+
+  <h2 class="text-2xl font-semibold mb-4">What Does GPT Stand For?</h2>
+  <p class="mb-8">GPT stands for "Generative Pre-trained Transformer." It means the AI has been trained on a broad set of information to understand language patterns, and can then generate intelligent, context-aware responses based on the data it's exposed to.</p>
+
+  <h2 class="text-2xl font-semibold mb-4">How Does a GPT Work?</h2>
+  <p class="mb-8">A GPT uses deep learning algorithms to predict and generate natural-sounding responses. When customized for business use, a GPT can be fine-tuned on your company's documents, FAQs, service manuals, and more, allowing it to serve your customers or team with domain-specific knowledge.</p>
+
+  <h2 class="text-2xl font-semibold mb-4">Why Are Businesses Using GPTs?</h2>
+  <p class="mb-12">Custom GPTs help automate tasks, reduce manual effort, improve customer experience, and open up new levels of personalization at scale. Whether it's handling customer inquiries or supporting internal training, GPTs create huge efficiencies for modern businesses.</p>
+
+  <div class="text-center">
+    <a href="/#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition">🚀 Build Your Custom GPT</a>
+  </div>
+
+  <div class="text-center mt-10">
+    <a href="/" class="text-blue-600 hover:underline">← Back to Home</a>
+  </div>
+
+</main>
+
+<footer class="bg-blue-700 text-white p-6 text-center text-sm mt-20">
+  &copy; 2025 YourCustomGPT.io | All rights reserved.
+</footer>
+
+</body>
+</html>
