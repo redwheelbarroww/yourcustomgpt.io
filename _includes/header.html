@@ -1,0 +1,30 @@
+<header class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-blue-700"><a href="/">YourCustomGPT.io</a></h1>
+    <button id="menu-toggle" class="md:hidden text-2xl text-gray-600">☰</button>
+    <nav class="hidden md:flex items-center space-x-6 text-blue-600">
+      <a href="/#services" class="hover:underline">Services</a>
+      <a href="/#pricing" class="hover:underline">Pricing</a>
+      <a href="/#faq" class="hover:underline">FAQ</a>
+      <a href="/learn.html" class="hover:underline">Learn</a>
+      <a href="/#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl">Get Started</a>
+    </nav>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-blue-600">
+    <a href="/#services" class="block">Services</a>
+    <a href="/#pricing" class="block">Pricing</a>
+    <a href="/#faq" class="block">FAQ</a>
+    <a href="/learn.html" class="block">Learn</a>
+    <a href="/#contact" class="block bg-blue-600 text-white px-4 py-2 rounded-xl">Get Started</a>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  });
+</script>
