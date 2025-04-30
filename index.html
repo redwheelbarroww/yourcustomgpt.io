@@ -298,26 +298,49 @@
   </section>
 
 
-  <section id="faq" class="py-20 bg-gray-50 px-6">
+ <section id="faq" class="py-24 bg-white px-6">
   <div class="max-w-3xl mx-auto">
     <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-gray-900 mb-12">❓ Frequently Asked Questions</h2>
 
-    <div class="space-y-8">
-      <div>
-        <h3 class="text-lg font-semibold text-gray-800 mb-1">⏱️ How long does it take?</h3>
-        <p class="text-gray-700">Most builds are delivered in 5–7 business days depending on complexity and number of documents.</p>
+    <div class="space-y-4" id="faq-container">
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="w-full text-left p-5 flex justify-between items-center faq-toggle font-semibold text-gray-800 text-lg">
+          ⏱️ How long does it take?
+          <span class="text-xl transform transition-transform">+</span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-600">
+          Most builds are delivered in 5–7 business days depending on complexity and number of documents.
+        </div>
       </div>
-      <div>
-        <h3 class="text-lg font-semibold text-gray-800 mb-1">📄 What materials do you need?</h3>
-        <p class="text-gray-700">We’ll guide you through sending product manuals, help center docs, internal wikis, or service guides.</p>
+
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="w-full text-left p-5 flex justify-between items-center faq-toggle font-semibold text-gray-800 text-lg">
+          📄 What materials do you need?
+          <span class="text-xl transform transition-transform">+</span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-600">
+          We’ll guide you through sending product manuals, service docs, help center articles, or internal playbooks.
+        </div>
       </div>
-      <div>
-        <h3 class="text-lg font-semibold text-gray-800 mb-1">👥 Can you train our internal team?</h3>
-        <p class="text-gray-700">Yes — we offer consulting and enablement packages designed to help your team build GPTs in-house.</p>
+
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="w-full text-left p-5 flex justify-between items-center faq-toggle font-semibold text-gray-800 text-lg">
+          👥 Can you train our internal team?
+          <span class="text-xl transform transition-transform">+</span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-600">
+          Yes — our consulting and training package is designed to equip your team to build and manage GPTs in-house.
+        </div>
       </div>
-      <div>
-        <h3 class="text-lg font-semibold text-gray-800 mb-1">💻 Do I need to know code?</h3>
-        <p class="text-gray-700">No coding needed. We deliver fully usable GPTs and Claude apps that plug into your current tools.</p>
+
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="w-full text-left p-5 flex justify-between items-center faq-toggle font-semibold text-gray-800 text-lg">
+          💻 Do I need to know code?
+          <span class="text-xl transform transition-transform">+</span>
+        </button>
+        <div class="faq-answer hidden px-5 pb-5 text-gray-600">
+          No coding is required. We deliver fully usable GPTs and Claude apps that run in the tools you're already using.
+        </div>
       </div>
     </div>
   </div>
