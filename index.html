@@ -309,53 +309,56 @@
   </section>
 
 
- <section id="faq" class="py-24 bg-white px-6">
+ <section id="faq" class="py-20 bg-gray-50 px-6">
   <div class="max-w-3xl mx-auto">
     <h2 class="text-4xl sm:text-5xl font-extrabold text-center text-gray-900 mb-12">❓ Frequently Asked Questions</h2>
 
-    <div class="space-y-4" id="faq-container">
-      <div class="border border-gray-200 rounded-xl overflow-hidden">
-        <button class="w-full text-left p-5 flex justify-between items-center faq-toggle font-semibold text-gray-800 text-lg">
-          ⏱️ How long does it take?
-          <span class="text-xl transform transition-transform">+</span>
+    <div class="space-y-4">
+  <div class="faq-item border rounded-xl bg-white shadow-sm hover:shadow-md transition duration-200">
+
+        <button class="faq-question flex justify-between items-center w-full p-4 font-semibold text-left text-gray-800">
+          <span>⏱️ How long does it take?</span>
+          <span class="faq-toggle-icon">+</span>
         </button>
-        <div class="faq-answer hidden px-5 pb-5 text-gray-600">
+        <div class="faq-answer px-4 pb-4 hidden text-gray-600">
           Most builds are delivered in 5–7 business days depending on complexity and number of documents.
         </div>
       </div>
 
-      <div class="border border-gray-200 rounded-xl overflow-hidden">
-        <button class="w-full text-left p-5 flex justify-between items-center faq-toggle font-semibold text-gray-800 text-lg">
-          📄 What materials do you need?
-          <span class="text-xl transform transition-transform">+</span>
+      <div class="faq-item border rounded-xl bg-white shadow-sm">
+        <button class="faq-question flex justify-between items-center w-full p-4 font-semibold text-left text-gray-800">
+          <span>📄 What materials do you need?</span>
+          <span class="faq-toggle-icon">+</span>
         </button>
-        <div class="faq-answer hidden px-5 pb-5 text-gray-600">
-          We’ll guide you through sending product manuals, service docs, help center articles, or internal playbooks.
+        <div class="faq-answer px-4 pb-4 hidden text-gray-600">
+          We’ll guide you through sending product manuals, help center docs, internal wikis, or service guides.
         </div>
       </div>
 
-      <div class="border border-gray-200 rounded-xl overflow-hidden">
-        <button class="w-full text-left p-5 flex justify-between items-center faq-toggle font-semibold text-gray-800 text-lg">
-          👥 Can you train our internal team?
-          <span class="text-xl transform transition-transform">+</span>
+      <div class="faq-item border rounded-xl bg-white shadow-sm">
+        <button class="faq-question flex justify-between items-center w-full p-4 font-semibold text-left text-gray-800">
+          <span>👥 Can you train our internal team?</span>
+          <span class="faq-toggle-icon">+</span>
         </button>
-        <div class="faq-answer hidden px-5 pb-5 text-gray-600">
+        <div class="faq-answer px-4 pb-4 hidden text-gray-600">
           Yes — our consulting and training package is designed to equip your team to build and manage GPTs in-house.
         </div>
       </div>
 
-      <div class="border border-gray-200 rounded-xl overflow-hidden">
-        <button class="w-full text-left p-5 flex justify-between items-center faq-toggle font-semibold text-gray-800 text-lg">
-          💻 Do I need to know code?
-          <span class="text-xl transform transition-transform">+</span>
+      <div class="faq-item border rounded-xl bg-white shadow-sm">
+        <button class="faq-question flex justify-between items-center w-full p-4 font-semibold text-left text-gray-800">
+          <span>💻 Do I need to know code?</span>
+          <span class="faq-toggle-icon">+</span>
         </button>
-        <div class="faq-answer hidden px-5 pb-5 text-gray-600">
-          No coding is required. We deliver fully usable GPTs and Claude apps that run in the tools you're already using.
+        <div class="faq-answer px-4 pb-4 hidden text-gray-600">
+          No coding required. Our GPTs and Claude apps are delivered ready to use with your current tools.
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 
   <section id="contact" class="py-20 bg-gray-50 px-6">
@@ -434,12 +437,23 @@
 </script>
 
 <script>
-  document.getElementById('menu-toggle').addEventListener('click', () => {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const question = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+      const icon = item.querySelector(".faq-toggle-icon");
+
+      question.addEventListener("click", () => {
+        answer.classList.toggle("hidden");
+        item.classList.toggle("border-blue-600");
+        question.classList.toggle("text-blue-700");
+        icon.textContent = answer.classList.contains("hidden") ? "+" : "−";
+      });
+    });
   });
 </script>
-
 
 </body>
 </html>
