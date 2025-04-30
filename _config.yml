@@ -1,1 +1,5 @@
+# _config.yml
+title: YourCustomGPT.io
 markdown: kramdown
+theme: null
+exclude: [node_modules]
