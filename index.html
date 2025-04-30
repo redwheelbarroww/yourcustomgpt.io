@@ -13,14 +13,19 @@
 
 <body class="bg-white text-gray-800 font-sans">
 
-<header class="bg-white shadow-md">
+<header class="bg-white shadow-md relative">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <h1 class="text-2xl font-bold text-blue-700">YourCustomGPT.io</h1>
+
+    <!-- Hamburger menu button (mobile only) -->
     <button id="menu-toggle" class="md:hidden text-2xl text-gray-600 focus:outline-none">☰</button>
+
+    <!-- Desktop nav -->
     <nav class="hidden md:flex items-center space-x-6 text-blue-600">
       <a href="#services" class="hover:underline">Services</a>
       <a href="#pricing" class="hover:underline">Pricing</a>
       <a href="#faq" class="hover:underline">FAQ</a>
+
       <div class="relative group inline-block">
         <a href="/learn.html" class="hover:underline group">Learn</a>
         <div class="absolute opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transform transition-all duration-300 bg-white border border-gray-200 mt-2 rounded-lg shadow-md z-10">
@@ -29,18 +34,21 @@
           <a href="/gpt-use-cases-for-business.html" class="block px-6 py-3 hover:bg-blue-50">Top GPT Use Cases</a>
         </div>
       </div>
+
       <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl">Get Started</a>
     </nav>
   </div>
 
-  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-blue-600">
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white px-6 pb-6 z-50 text-blue-600 space-y-4">
     <a href="#services" class="block">Services</a>
     <a href="#pricing" class="block">Pricing</a>
     <a href="#faq" class="block">FAQ</a>
     <a href="/learn.html" class="block">Learn</a>
-    <a href="#contact" class="block bg-blue-600 text-white px-4 py-2 rounded-xl">Get Started</a>
+    <a href="#contact" class="block bg-blue-600 text-white text-center py-2 rounded-xl">Get Started</a>
   </div>
 </header>
+
 
 <script>
   document.getElementById('menu-toggle').addEventListener('click', () => {
@@ -219,6 +227,14 @@
     });
   });
 </script>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
+
 
 </body>
 </html>
