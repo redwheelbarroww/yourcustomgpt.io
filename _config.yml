@@ -3,3 +3,10 @@ title: YourCustomGPT.io
 markdown: kramdown
 theme: null
 exclude: [node_modules]
+
+include:
+  - external-gpt-applications.html
+  - gpts-in-startups.html
+  - who-benefits-from-custom-gpt-tools.html
+  - sector-specific-agentic-systems.html
+  - internal-gpt-knowledge-management.html
