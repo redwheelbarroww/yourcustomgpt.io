@@ -1,228 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom GPTs and Claude Apps for Business | YourCustomGPT.io</title>
-  <meta name="description" content="Custom GPTs, Claude Apps, AI consulting, and training built for your business needs. Save time, automate workflows, and grow with YourCustomGPT.io.">
-  <meta name="keywords" content="Custom GPT, Claude Apps, AI Consulting, AI Assistants, Business Automation, GPT Training">
-  <meta property="og:title" content="Custom GPTs and Claude Apps for Business | YourCustomGPT.io">
-  <meta property="og:description" content="Custom GPTs and Claude Apps built for your business workflows and goals. Plus consulting and training for in-house AI teams.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourcustomgpt.io/">
-  <link rel="canonical" href="https://yourcustomgpt.io/">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BHD8G378S6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BHD8G378S6');
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YourCustomGPT.io</title>
+  <meta name="description" content="Custom GPTs, Claude Apps, and AI consulting tailored to your business needs." />
+  <meta name="keywords" content="Custom GPT, Claude Apps, AI Consulting, GPT Training, AI Assistants" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style>html { scroll-behavior: smooth; }</style>
 </head>
 
-<body class="text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans">
 
-<header class="p-6 bg-white shadow-md flex justify-between items-center">
-  <h1 class="text-3xl font-bold text-blue-700">YourCustomGPT.io</h1>
-<nav class="space-x-6 flex items-center">
-
-  <!-- Services, Pricing, FAQ -->
-  <a href="#services" class="hover:underline text-blue-600">Services</a>
-  <a href="#pricing" class="hover:underline text-blue-600">Pricing</a>
-  <a href="#faq" class="hover:underline text-blue-600">FAQ</a>
-
-  <!-- Learn dropdown -->
-<div class="relative inline-block">
-    <a href="/learn.html" class="hover:underline text-blue-600 group">Learn</a>
-    <div class="absolute opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transform transition-all duration-300 bg-white border border-gray-200 mt-2 rounded-lg shadow-md z-10">
-      <a href="/what-is-a-gpt.html" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">What is a GPT?</a>
-      <a href="/how-to-use-a-custom-gpt.html" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">How to Use a Custom GPT</a>
-      <a href="/gpt-use-cases-for-business.html" class="block px-6 py-3 text-gray-700 hover:bg-blue-50">Top GPT Use Cases</a>
-    </div>
+<header class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-blue-700">YourCustomGPT.io</h1>
+    <button id="menu-toggle" class="md:hidden text-2xl text-gray-600 focus:outline-none">☰</button>
+    <nav class="hidden md:flex items-center space-x-6 text-blue-600">
+      <a href="#services" class="hover:underline">Services</a>
+      <a href="#pricing" class="hover:underline">Pricing</a>
+      <a href="#faq" class="hover:underline">FAQ</a>
+      <div class="relative group inline-block">
+        <a href="/learn.html" class="hover:underline group">Learn</a>
+        <div class="absolute opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transform transition-all duration-300 bg-white border border-gray-200 mt-2 rounded-lg shadow-md z-10">
+          <a href="/what-is-a-gpt.html" class="block px-6 py-3 hover:bg-blue-50">What is a GPT?</a>
+          <a href="/how-to-use-a-custom-gpt.html" class="block px-6 py-3 hover:bg-blue-50">How to Use a Custom GPT</a>
+          <a href="/gpt-use-cases-for-business.html" class="block px-6 py-3 hover:bg-blue-50">Top GPT Use Cases</a>
+        </div>
+      </div>
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl">Get Started</a>
+    </nav>
   </div>
 
-  <!-- Get Started button -->
-  <a href="#contact" class="bg-blue-600 hover:bg-blue-700 transition px-4 py-2 rounded-xl text-white">Get Started</a>
-</nav>
-
-
-
-
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-blue-600">
+    <a href="#services" class="block">Services</a>
+    <a href="#pricing" class="block">Pricing</a>
+    <a href="#faq" class="block">FAQ</a>
+    <a href="/learn.html" class="block">Learn</a>
+    <a href="#contact" class="block bg-blue-600 text-white px-4 py-2 rounded-xl">Get Started</a>
+  </div>
 </header>
 
-<main class="text-center">
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
 
-<section class="bg-gradient-to-br from-blue-50 to-white py-20 px-8">
-  <h2 class="text-5xl font-extrabold mb-6 text-gray-800">Custom GPTs, Claude Apps & AI Consulting</h2>
-  <p class="text-2xl mb-8 text-gray-600">We create custom-trained GPTs, Claude Apps, and provide AI consulting to help your business scale smarter and faster.</p>
-  <a href="https://calendly.com/rebecca-m-luxton/30min" target="_blank" class="bg-blue-600 hover:bg-blue-700 transition transform hover:scale-105 px-8 py-4 rounded-xl text-lg text-white font-semibold">🗓️ Book a 15-Minute Call</a>
-</section>
+<main class="text-center px-6">
 
-<section id="services" class="py-20 bg-white px-8">
-  <h3 class="text-4xl font-bold mb-6 text-gray-800">💡 Our Services</h3>
-  <p class="text-xl text-gray-600 mb-8">We build and train AI assistants powered by cutting-edge technologies:</p>
-  <ul class="list-disc list-inside text-left max-w-2xl mx-auto text-gray-700 text-lg space-y-4">
-    <li><strong>Custom GPTs (OpenAI)</strong> — AI assistants tailored to your business workflows, branding, and knowledge base.</li>
-    <li><strong>Claude Apps (Anthropic)</strong> — Secure, conversational AI customized for nuanced use cases.</li>
-    <li><strong>AI Consulting</strong> — Strategy sessions to scope, design, or improve your AI assistant systems.</li>
-    <li><strong>Training Programs</strong> — Coaching and workshops for businesses building their own GPTs internally.</li>
-  </ul>
-</section>
+  <section class="bg-gradient-to-br from-blue-50 to-white py-20">
+    <h2 class="text-4xl sm:text-5xl font-extrabold mb-6">Custom GPTs, Claude Apps & AI Consulting</h2>
+    <p class="text-lg sm:text-xl text-gray-600 mb-8">We create custom-trained GPTs and Claude Apps to help your business scale smarter and faster.</p>
+    <a href="https://calendly.com/rebecca-m-luxton/30min" class="inline-block w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-6 py-4 rounded-xl">🗓️ Book a 15-Minute Call</a>
+  </section>
 
-<section id="pricing" class="py-20 bg-gray-50 px-6">
-  <h3 class="text-4xl font-bold mb-12 text-center text-gray-800">💸 Pricing</h3>
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+  <section id="services" class="py-20 bg-white">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-6">💡 Our Services</h3>
+    <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">We build AI assistants powered by GPTs and Claude. Tailored to your products, brand, and team needs.</p>
+    <ul class="text-left max-w-2xl mx-auto text-gray-700 space-y-4 text-base sm:text-lg">
+      <li><strong>Custom GPTs (OpenAI)</strong> — AI trained on your content, FAQs, and tone.</li>
+      <li><strong>Claude Apps (Anthropic)</strong> — Secure AI for knowledge-heavy and sensitive use cases.</li>
+      <li><strong>AI Consulting</strong> — Help planning and integrating GPTs into your org.</li>
+      <li><strong>Training & Enablement</strong> — Coaching your team to build with GPTs internally.</li>
+    </ul>
+  </section>
 
-    <!-- Starter -->
-    <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:shadow-xl transition">
-      <div class="text-3xl mb-2 text-gray-500">🚀</div>
-      <h4 class="text-2xl font-bold mb-2 text-gray-800">Starter AI</h4>
-      <p class="text-4xl font-extrabold text-blue-600 mb-4">$300</p>
-      <ul class="text-gray-600 space-y-2 text-sm mb-6">
-        <li>🤖 1 custom GPT build</li>
-        <li>📄 Based on 1–2 documents</li>
-        <li>⏱️ Delivered in 7 days</li>
-      </ul>
-      <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">Book Starter</a>
+  <section id="pricing" class="py-20 bg-gray-50">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-12">💸 Pricing</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="text-3xl mb-2">🚀</div>
+        <h4 class="text-xl font-bold mb-2">Starter AI</h4>
+        <p class="text-3xl font-extrabold text-blue-600 mb-4">$300</p>
+        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+          <li>🤖 1 custom GPT build</li>
+          <li>📄 Based on 1–2 documents</li>
+          <li>⏱️ Delivered in 7 days</li>
+        </ul>
+        <a href="#contact" class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">Book Starter</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition border-2 border-blue-500 relative">
+        <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs px-2 py-1 rounded-bl">Most Popular</div>
+        <div class="text-3xl mb-2">🔥</div>
+        <h4 class="text-xl font-bold mb-2">Pro AI</h4>
+        <p class="text-3xl font-extrabold text-blue-600 mb-4">$600</p>
+        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+          <li>🤖 3 custom GPT builds</li>
+          <li>📚 Multi-document training</li>
+          <li>🎨 Branded tone & instructions</li>
+        </ul>
+        <a href="#contact" class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">Book Pro</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="text-3xl mb-2">🏢</div>
+        <h4 class="text-xl font-bold mb-2">Enterprise AI</h4>
+        <p class="text-3xl font-extrabold text-blue-600 mb-4">Custom Quote</p>
+        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+          <li>🧠 Full data integration</li>
+          <li>📊 API and automations</li>
+          <li>🏛️ Scoped business solutions</li>
+        </ul>
+        <a href="#contact" class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">Request Quote</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="text-3xl mb-2">🧑‍🏫</div>
+        <h4 class="text-xl font-bold mb-2">AI Consulting</h4>
+        <p class="text-3xl font-extrabold text-blue-600 mb-4">$150/hr</p>
+        <ul class="text-sm text-gray-600 space-y-1 mb-4">
+          <li>🧭 Strategy & workflow mapping</li>
+          <li>🛠️ Coaching for internal teams</li>
+          <li>💬 GPT prompt & logic design</li>
+        </ul>
+        <a href="#contact" class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="faq" class="py-20 bg-white px-6">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-8 text-center">❓ Frequently Asked Questions</h3>
+    <div class="text-left max-w-2xl mx-auto space-y-8 text-base sm:text-lg text-gray-700">
+      <div>
+        <h4 class="font-semibold mb-2">How long does it take?</h4>
+        <p>Most builds are delivered in 5–7 business days depending on complexity and number of documents.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">What materials do you need?</h4>
+        <p>We’ll guide you through sending product manuals, service docs, help center articles, or internal playbooks.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Can you train our internal team?</h4>
+        <p>Yes — our consulting and training package is designed to equip your team to build and manage GPTs in-house.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Do I need to know code?</h4>
+        <p>No coding is required. We deliver fully usable GPTs and Claude apps that run in the tools you're already using.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-gray-50 px-6">
+    <h3 class="text-3xl sm:text-4xl font-bold mb-8 text-center">📞 Get in Touch</h3>
+    <p class="text-center text-gray-600 text-base sm:text-lg mb-6">Book a quick call or send your project request below:</p>
+
+    <div class="flex flex-col md:flex-row justify-center gap-6 mb-10">
+      <a href="https://calendly.com/rebecca-m-luxton/30min" target="_blank" class="w-full md:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-4 rounded-xl transition">🗓️ Book a 15-Min Call</a>
+      <a href="#consultation-form" class="w-full md:w-auto text-center border border-blue-600 text-blue-600 font-semibold px-6 py-4 rounded-xl hover:bg-blue-50 transition">📝 Project Request</a>
     </div>
 
-    <!-- Pro (Most Popular) -->
-    <div class="relative bg-white p-8 rounded-2xl shadow-md text-center hover:shadow-xl transition border-2 border-blue-500">
-      <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Most Popular</div>
-      <div class="text-3xl mb-2 text-gray-500">🔥</div>
-      <h4 class="text-2xl font-bold mb-2 text-gray-800">Pro AI</h4>
-      <p class="text-4xl font-extrabold text-blue-600 mb-4">$600</p>
-      <ul class="text-gray-600 space-y-2 text-sm mb-6">
-        <li>🤖 3 custom GPT builds</li>
-        <li>📚 Multi-document training</li>
-        <li>🎨 Branding & prompt strategy</li>
-      </ul>
-      <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">Book Pro</a>
-    </div>
+    <form action="https://formspree.io/f/xzzrdgbz" method="POST" id="consultation-form" class="bg-white p-6 rounded-2xl shadow-md max-w-xl mx-auto">
+      <input type="hidden" name="_subject" value="New Consultation Request from YourCustomGPT.io" />
+      <input type="text" name="_gotcha" style="display:none" />
+      
+      <div class="mb-4">
+        <label for="name" class="block font-semibold mb-1">Full Name</label>
+        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:border-blue-500 focus:outline-none" />
+      </div>
 
-    <!-- Enterprise -->
-    <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:shadow-xl transition">
-      <div class="text-3xl mb-2 text-gray-500">🏢</div>
-      <h4 class="text-2xl font-bold mb-2 text-gray-800">Enterprise AI</h4>
-      <p class="text-4xl font-extrabold text-blue-600 mb-4">Custom Quote</p>
-      <ul class="text-gray-600 space-y-2 text-sm mb-6">
-        <li>🧠 Full business dataset integration</li>
-        <li>📊 API connections & automations</li>
-        <li>🏛️ Fully scoped custom solutions</li>
-      </ul>
-      <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">Request Quote</a>
-    </div>
+      <div class="mb-4">
+        <label for="email" class="block font-semibold mb-1">Email Address</label>
+        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:border-blue-500 focus:outline-none" />
+      </div>
 
-    <!-- Consulting -->
-    <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:shadow-xl transition">
-      <div class="text-3xl mb-2 text-gray-500">🧑‍🏫</div>
-      <h4 class="text-2xl font-bold mb-2 text-gray-800">AI Consulting & Training</h4>
-      <p class="text-4xl font-extrabold text-blue-600 mb-4">$150/hr</p>
-      <ul class="text-gray-600 space-y-2 text-sm mb-6">
-        <li>🧭 1:1 Strategy sessions</li>
-        <li>🛠️ GPT build coaching & technical guidance</li>
-        <li>🏛️ In-house team enablement</li>
-      </ul>
-      <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">Book Consult</a>
-    </div>
+      <div class="mb-4">
+        <label for="package" class="block font-semibold mb-1">Package of Interest</label>
+        <select id="package" name="package" required class="w-full px-4 py-2 border rounded-lg focus:border-blue-500 focus:outline-none">
+          <option value="Starter AI">Starter AI</option>
+          <option value="Pro AI">Pro AI</option>
+          <option value="Enterprise AI">Enterprise AI</option>
+          <option value="AI Consulting">AI Consulting</option>
+        </select>
+      </div>
 
-  </div>
-</section>
+      <div class="mb-6">
+        <label for="message" class="block font-semibold mb-1">Use Case / Goals</label>
+        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border rounded-lg focus:border-blue-500 focus:outline-none"></textarea>
+      </div>
 
-<section id="faq" class="py-20 bg-white px-8">
-  <h3 class="text-4xl font-bold mb-6 text-gray-800">❓ Frequently Asked Questions</h3>
-  <div class="text-left max-w-2xl mx-auto">
-    <h4 class="text-2xl font-semibold mb-2">How long does it take?</h4>
-    <p class="mb-8 text-lg text-gray-600">Most GPT or Claude builds are delivered in about 7 days, depending on complexity and materials.</p>
-
-    <h4 class="text-2xl font-semibold mb-2">What materials do you need?</h4>
-    <p class="mb-8 text-lg text-gray-600">We typically use internal documents, FAQs, support chats, product guides, and manuals.</p>
-
-    <h4 class="text-2xl font-semibold mb-2">Can you train our internal team to build GPTs?</h4>
-    <p class="mb-8 text-lg text-gray-600">Yes! Our AI Consulting & Training package is built to help companies manage and build GPTs in-house.</p>
-
-    <h4 class="text-2xl font-semibold mb-2">Do I need any technical experience?</h4>
-    <p class="mb-8 text-lg text-gray-600">No. We deliver ready-to-use AI assistants that require no technical background to operate.</p>
-  </div>
-</section>
-
-<section id="contact" class="py-20 bg-gray-50 px-8">
-  <h3 class="text-4xl font-bold mb-6 text-gray-800">📞 Get in Touch</h3>
-  <p class="text-lg mb-8 text-gray-600">Choose how you'd like to connect:</p>
-
-  <div class="flex flex-col md:flex-row justify-center gap-8 mb-10">
-    <a href="https://calendly.com/rebecca-m-luxton/30min" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition transform hover:scale-105">🗓️ Schedule a 15-Minute Call</a>
-    <a href="#consultation-form" class="bg-white hover:bg-gray-100 text-blue-600 font-semibold border border-blue-600 px-8 py-4 rounded-xl transition transform hover:scale-105">📝 Submit a Project Request</a>
-  </div>
-
-  <form action="https://formspree.io/f/xzzrdgbz" method="POST" class="max-w-xl mx-auto text-left bg-white p-6 rounded-2xl shadow-md" id="consultation-form">
-    <input type="hidden" name="_subject" value="New Consultation Request from YourCustomGPT.io">
-    <input type="text" name="_gotcha" style="display:none">
-
-    <div class="mb-4">
-      <label for="name" class="block text-gray-700 font-semibold mb-1">Full Name</label>
-      <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none">
-    </div>
-
-    <div class="mb-4">
-      <label for="email" class="block text-gray-700 font-semibold mb-1">Email Address</label>
-      <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none">
-    </div>
-
-    <div class="mb-4">
-      <label for="package" class="block text-gray-700 font-semibold mb-1">Package of Interest</label>
-      <select id="package" name="package" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none">
-        <option value="Starter AI">Starter AI</option>
-        <option value="Pro AI">Pro AI</option>
-        <option value="Enterprise AI">Enterprise AI</option>
-        <option value="AI Consulting & Training">AI Consulting & Training</option>
-      </select>
-    </div>
-
-    <div class="mb-6">
-      <label for="message" class="block text-gray-700 font-semibold mb-1">Use Case / Goals</label>
-      <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-blue-500 focus:outline-none"></textarea>
-    </div>
-
-    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105 mb-2">📨 Submit Request</button>
-    <p class="text-sm text-center text-gray-500">🕐 We’ll follow up within 24 hours.</p>
-  </form>
-</section>
-
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition">📨 Submit</button>
+      <p class="text-sm text-center text-gray-500 mt-2">⏱️ You'll hear from us within 24 hours.</p>
+    </form>
+  </section>
 </main>
 
-<footer class="bg-blue-700 text-white p-6 text-center text-sm">
-  &copy; 2025 YourCustomGPT.io | All rights reserved.
+<footer class="bg-blue-700 text-white text-sm text-center p-6">
+  &copy; 2025 YourCustomGPT.io — All rights reserved.
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.getElementById("consultation-form");
-  form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      form.innerHTML = "<p class='text-2xl text-center text-green-600 font-bold'>🎉 Thanks for your request! We'll be in touch shortly.</p>";
-    } else {
-      form.innerHTML = "<p class='text-2xl text-center text-red-600 font-bold'>❌ Oops! Something went wrong. Please try again later.</p>";
-    }
+  // Mobile nav toggle
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
   });
-});
+
+  // Form success/feedback
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("consultation-form");
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.innerHTML = "<p class='text-center text-green-600 text-xl font-semibold'>🎉 Thanks! We'll follow up shortly.</p>";
+      } else {
+        form.innerHTML = "<p class='text-center text-red-600 text-xl font-semibold'>❌ Something went wrong. Try again soon.</p>";
+      }
+    });
+  });
 </script>
 
 </body>
