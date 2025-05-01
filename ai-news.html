@@ -14,7 +14,8 @@ permalink: /ai-news/
     {% for post in site.posts %}
       {% if post.categories contains "ai-news" %}
         <article class="border-b pb-6">
-          <h2 class="text-xl font-semibold mb-1">
+          <h2 class="text-2xl font-bold mb-2">
+
             <a href="{{ post.url }}" class="text-blue-600 hover:underline">{{ post.title }}</a>
           </h2>
           <p class="text-gray-500 text-sm mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
