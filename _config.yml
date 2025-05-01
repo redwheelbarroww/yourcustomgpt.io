@@ -10,3 +10,9 @@ include:
   - who-benefits-from-custom-gpt-tools.html
   - sector-specific-agentic-systems.html
   - internal-gpt-knowledge-management.html
+
+url: "https://yourcustomgpt.io"
+baseurl: ""
+
+plugins:
+  - jekyll-sitemap
