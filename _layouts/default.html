@@ -9,13 +9,13 @@
   <!-- Tailwind CSS via CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
 
-  <!-- Optional: Add Prose Styling if using Tailwind Typography CDN -->
+  <!-- Optional (but safe to keep for future): Tailwind Typography -->
   <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.9/dist/typography.min.css" rel="stylesheet" />
 
-  <!-- Favicon and global styles -->
+  <!-- Favicon and custom styles -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/assets/css/style.css" />
-  
+
   <style>html { scroll-behavior: smooth; }</style>
 </head>
 
@@ -23,10 +23,9 @@
 
   {% include header.html %}
 
-<main class="max-w-3xl mx-auto px-4 py-16 text-base leading-relaxed space-y-6">
-  {{ content }}
-</main>
-
+  <main class="max-w-3xl mx-auto px-4 py-16 text-base leading-relaxed space-y-6">
+    {{ content }}
+  </main>
 
   <footer class="bg-blue-700 text-white text-sm text-center p-6 mt-20">
     &copy; 2025 YourCustomGPT.io — All rights reserved.
