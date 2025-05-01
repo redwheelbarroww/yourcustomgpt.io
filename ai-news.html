@@ -1,0 +1,20 @@
+---
+layout: default
+title: AI News & Trends
+permalink: /ai-news/
+---
+
+<h1>🧠 AI News & Trends</h1>
+<p>Stay updated on the latest GPT, Claude, and AI industry news — curated weekly by YourCustomGPT.io.</p>
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.categories contains "ai-news" %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+        <p><small>{{ post.date | date: "%B %d, %Y" }}</small></p>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
