@@ -5,18 +5,27 @@
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ page.description }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Tailwind CSS via CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-  <link rel="icon" href="/favicon.ico" />
-  <style>html { scroll-behavior: smooth; }</style>
-<link rel="stylesheet" href="/assets/css/style.css">
 
+  <!-- Optional: Add Prose Styling if using Tailwind Typography CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.9/dist/typography.min.css" rel="stylesheet" />
+
+  <!-- Favicon and global styles -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  
+  <style>html { scroll-behavior: smooth; }</style>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   {% include header.html %}
 
-  {{ content }}
+  <main class="prose prose-blue max-w-3xl mx-auto px-4 py-16">
+    {{ content }}
+  </main>
 
   <footer class="bg-blue-700 text-white text-sm text-center p-6 mt-20">
     &copy; 2025 YourCustomGPT.io — All rights reserved.
