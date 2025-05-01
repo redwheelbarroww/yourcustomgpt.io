@@ -2,20 +2,16 @@
 layout: default
 ---
 
-<article style="max-width: 700px; margin: 0 auto; padding: 4rem 1rem; font-family: system-ui, sans-serif; line-height: 1.6;">
-  <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
-  <p style="color: #555; font-size: 0.875rem; margin-bottom: 2rem;">
-    {{ page.date | date: "%B %d, %Y" }}
-  </p>
+<article class="text-base leading-relaxed space-y-6">
+  <h1 class="text-3xl font-bold mb-2">{{ page.title }}</h1>
+  <p class="text-gray-500 text-sm mb-8">{{ page.date | date: "%B %d, %Y" }}</p>
 
-  <div style="font-size: 1.05rem;">
-    {{ content }}
-  </div>
+  {{ content }}
 
-  <hr style="margin: 3rem 0;" />
+  <hr class="my-12" />
 
-  <p style="font-size: 0.9rem; color: #555;">
-    ✨ Want a custom GPT like this for your business?
-    <a href="/contact" style="color: #1a73e8; text-decoration: underline;">Book a Custom Build →</a>
+  <p class="text-sm text-gray-600">
+    ✨ Want a custom GPT like this for your business? 
+    <a href="/contact" class="text-blue-600 underline">Book a Custom Build →</a>
   </p>
 </article>
