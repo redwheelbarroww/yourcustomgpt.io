@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "🗞️ April AI Roundup: Claude 3 Haiku, GPT-4 Turbo Updates, and More"
 categories: ai-news
 excerpt: "Catch up on the biggest AI launches and GPT updates from April 2025 — including Claude 3 Haiku, GPT-4 Turbo improvements, and open-source momentum."
