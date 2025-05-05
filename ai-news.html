@@ -4,16 +4,18 @@ title: AI News & Trends
 permalink: /ai-news.html
 ---
 
-<div class="max-w-3xl mx-auto px-4 py-12 text-center prose prose-lg prose-blue">
-  <h1>🧠 AI News & Trends</h1>
-  <p>
-    Stay updated on the latest GPT, Claude, and AI industry news — curated weekly by YourCustomGPT.io.
-  </p>
+<div class="max-w-3xl mx-auto px-4 py-12">
+  <div class="text-center prose prose-lg prose-blue mb-12">
+    <h1>🧠 AI News & Trends</h1>
+    <p>
+      <strong>Stay Updated on the Latest GPT, Claude, and AI Industry News — Curated Weekly by YourCustomGPT.io.</strong>
+    </p>
+  </div>
 
-  <div class="space-y-12">
+  <div class="space-y-12 prose prose-lg prose-blue">
     {% for post in site.posts %}
       {% if post.categories contains "ai-news" %}
-        <article class="border-b pb-6 mx-auto">
+        <article class="border-b pb-6">
           <h2>
             <a href="{{ post.url }}" class="text-blue-600 hover:underline">{{ post.title }}</a>
           </h2>
