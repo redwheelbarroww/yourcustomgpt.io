@@ -1,36 +1,32 @@
 ---
 layout: default
-title: AI News & Trends
+title: AI News
 permalink: /ai-news.html
 ---
 
-<div class="max-w-3xl mx-auto px-4 py-12">
-  <!-- Hero Section -->
+<section class="max-w-4xl mx-auto px-4 py-16">
+  <!-- Hero -->
   <div class="text-center mb-12">
-    <h1 class="text-3xl font-bold mb-2">🧠 AI News & Trends</h1>
-    <p class="text-gray-600 text-lg font-medium">
-      Stay Updated on the Latest GPT, Claude, and AI Industry News — Curated Weekly by YourCustomGPT.io.
+    <h1 class="text-4xl font-bold text-gray-900 mb-2">🧠 AI News & Trends</h1>
+    <p class="text-gray-600 text-lg">
+      Stay updated on GPT, Claude, and AI industry trends — curated weekly by YourCustomGPT.io.
     </p>
   </div>
 
-  <!-- Posts Loop -->
-  <div class="space-y-12">
+  <!-- News Cards -->
+  <div class="space-y-8">
     {% for post in site.posts %}
       {% if post.categories contains "ai-news" %}
-        <article class="pb-6 border-b border-gray-200">
+        <article class="bg-white shadow-sm rounded-xl p-6 border border-gray-200 hover:shadow-md transition">
           <h2 class="text-2xl font-semibold text-gray-900 mb-1">
-            <a href="{{ post.url }}" class="text-blue-600 hover:underline hover:text-blue-700 transition">
-              {{ post.title }}
-            </a>
+            <a href="{{ post.url }}" class="text-blue-600 hover:text-blue-800">{{ post.title }}</a>
           </h2>
-          <p class="text-sm text-gray-500 mb-2">
+          <p class="text-sm text-gray-500 mb-3">
             {{ post.date | date: "%B %d, %Y" }}
           </p>
-          <p class="text-gray-700 leading-relaxed">
-            {{ post.excerpt }}
-          </p>
+          <p class="text-gray-700 leading-relaxed">{{ post.excerpt }}</p>
         </article>
       {% endif %}
     {% endfor %}
   </div>
-</div>
+</section>
