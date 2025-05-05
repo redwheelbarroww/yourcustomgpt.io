@@ -7,7 +7,7 @@ excerpt: "Catch up on the biggest AI launches and GPT updates from April 2025 �
 
 ## 🚀 Claude 3 Haiku Launches Publicly
 
-Anthropic's newest lightweight model, Claude 3 Haiku, officially went live in April. It's optimized for speed and cost-efficiency — ideal for real-time or mobile AI tasks. Free to try in most regions and a great GPT alternative for compact workflows.
+Anthropic's newest lightweight model, Claude 3 Haiku, officially went live in April. It's optimized for speed and cost-efficiency — ideal for real-time or mobile AI tasks.
 
 > 🧠 Claude 3 Haiku = fast, context-aware, and ideal for chat-based internal tools.
 
@@ -33,7 +33,7 @@ Mistral and LLaMA-based models are seeing rapid adoption. Companies seeking mode
 
 ---
 
-Want a custom GPT like Claude or GPT-4 for your business?  
+💡 *Want a custom GPT like Claude or GPT-4 for your business?*  
 **[→ Book a Custom Build](https://yourcustomgpt.io/contact)**
 
-📬 **Sign up for our weekly digest** to get the latest AI insights, tools, and use cases.
+📬 *Sign up for our weekly digest to get the latest AI insights, tools, and use cases.*
