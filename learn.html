@@ -25,11 +25,17 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
   <section id="foundations" class="mb-16">
     <h2 class="text-3xl font-bold text-gray-900 mb-6">📘 Foundations</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% assign titles = {
+        "what-is-a-gpt": "What Is a GPT?",
+        "how-to-use-a-custom-gpt": "How to Use a Custom GPT",
+        "gpt-use-cases-for-business": "Top GPT Use Cases",
+        "claude-custom-gpts": "Claude Apps for Teams",
+        "gpt-vs-agentic-ai": "GPTs vs Agentic AI"
+      } %}
       {% assign core_modules = "what-is-a-gpt,how-to-use-a-custom-gpt,gpt-use-cases-for-business,claude-custom-gpts,gpt-vs-agentic-ai" | split: "," %}
       {% for slug in core_modules %}
       <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-        {% assign page_title = slug | replace: "-", " " | capitalize %}
-        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ page_title | replace: "Gpt", "GPT" }}</h2>
+        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h2>
         <p class="text-gray-700 mb-4">Learn the basics and core strategies behind using GPTs and Claude effectively.</p>
         <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
       </div>
@@ -41,12 +47,21 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
   <section id="industries" class="mb-16">
     <h2 class="text-3xl font-bold text-gray-900 mb-6">🏭 GPTs by Industry</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% assign titles = {
+        "gpt-in-ecommerce": "GPTs in E-commerce",
+        "gpt-in-education": "GPTs in Education",
+        "gpt-in-hr": "GPTs in HR",
+        "gpt-in-legal": "GPTs in Legal",
+        "gpt-in-marketing-seo": "GPTs in Marketing & SEO",
+        "gpt-in-product-development": "GPTs in Product Development",
+        "gpt-for-data-analysis": "GPTs for Data Analysis",
+        "gpt-in-multilingual-support": "GPTs for Multilingual Support"
+      } %}
       {% assign industries = "gpt-in-ecommerce,gpt-in-education,gpt-in-hr,gpt-in-legal,gpt-in-marketing-seo,gpt-in-product-development,gpt-for-data-analysis,gpt-in-multilingual-support" | split: "," %}
       {% for slug in industries %}
       <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-        {% assign label = slug | replace: "gpt-in-", "" | replace: "gpt-for-", "" | capitalize %}
-        <h2 class="text-xl font-bold text-blue-700 mb-2">GPTs in {{ label }}</h2>
-        <p class="text-gray-700 mb-4">How GPTs are transforming the {{ label | downcase }} sector with automation and AI insight.</p>
+        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h2>
+        <p class="text-gray-700 mb-4">How GPTs are transforming the {{ titles[slug] | remove: 'GPTs in ' | remove: 'GPTs for ' | downcase }} sector with automation and AI insight.</p>
         <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Explore</a>
       </div>
       {% endfor %}
@@ -57,10 +72,17 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
   <section id="deep-dives" class="mb-16">
     <h2 class="text-3xl font-bold text-gray-900 mb-6">🧠 Strategy & Insights</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% assign titles = {
+        "sector-specific-agentic-systems": "Sector-Specific Agentic Systems",
+        "gpts-in-startups": "GPTs in Startup Spaces",
+        "external-gpt-applications": "External GPT Use Cases",
+        "internal-gpt-knowledge-management": "Internal GPT Use Cases",
+        "who-benefits-from-custom-gpt-tools": "Who Can Benefit from GPTs?"
+      } %}
       {% assign deep_dives = "sector-specific-agentic-systems,gpts-in-startups,external-gpt-applications,internal-gpt-knowledge-management,who-benefits-from-custom-gpt-tools" | split: "," %}
       {% for slug in deep_dives %}
       <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ slug | replace: "-", " " | capitalize | replace: "Gpt", "GPT" }}</h2>
+        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h2>
         <p class="text-gray-700 mb-4">In-depth exploration of GPT applications, deployment strategies, and business value.</p>
         <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Read More</a>
       </div>
