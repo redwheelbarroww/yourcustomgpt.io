@@ -4,132 +4,68 @@ title: Learn About Custom GPTs & Claude Apps
 description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI tools for business automation, content creation, and internal knowledge systems.
 ---
 
-
-
 <main class="max-w-6xl mx-auto px-6 py-16">
   <div class="text-sm text-blue-600 mb-6">
     <a href="/" class="hover:underline">← Back to Home</a>
   </div>
 
-<h2 class="text-3xl font-semibold text-center mb-4">What You’ll Learn About GPTs & Claude Apps</h2>
-<p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
-  This hub introduces the most powerful ways to use <a href="/what-is-a-gpt.html" class="text-blue-600 hover:underline">Custom GPTs</a> and <a href="/claude-custom-gpts.html" class="text-blue-600 hover:underline">Claude Apps</a> across business operations. Whether you’re looking to automate workflows, train internal teams, or deploy <a href="/sector-specific-agentic-systems.html" class="text-blue-600 hover:underline">Claude agents</a> for secure tasks, these learning modules will guide you from strategy to execution.
-</p>
+  <h1 class="text-5xl font-bold text-center mb-6">📚 Learn About Custom GPTs & Claude Apps</h1>
+  <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+    Explore real-world use cases, technical breakdowns, and practical guides to using <a href="/what-is-a-gpt.html" class="text-blue-600 hover:underline">Custom GPTs</a> and <a href="/claude-custom-gpts.html" class="text-blue-600 hover:underline">Claude Apps</a> across your business.
+  </p>
 
+  <!-- Quick Jump Nav -->
+  <nav class="flex flex-wrap gap-4 justify-center mb-12 text-sm font-semibold text-blue-600">
+    <a href="#foundations" class="hover:underline">Foundations</a>
+    <a href="#industries" class="hover:underline">Industry Use Cases</a>
+    <a href="#deep-dives" class="hover:underline">Insights & Strategy</a>
+  </nav>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-    <!-- Core Modules -->
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🤖 What is a GPT?</h2>
-      <p class="text-gray-700 mb-4">Understand how GPTs work, what they’re good at, and why they matter for your business strategy.</p>
-      <a href="/what-is-a-gpt.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
+  <!-- FOUNDATIONS SECTION -->
+  <section id="foundations" class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">📘 Foundations</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% assign core_modules = "what-is-a-gpt,how-to-use-a-custom-gpt,gpt-use-cases-for-business,claude-custom-gpts,gpt-vs-agentic-ai" | split: "," %}
+      {% for slug in core_modules %}
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+        {% assign page_title = slug | replace: "-", " " | capitalize %}
+        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ page_title | replace: "Gpt", "GPT" }}</h2>
+        <p class="text-gray-700 mb-4">Learn the basics and core strategies behind using GPTs and Claude effectively.</p>
+        <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
+      </div>
+      {% endfor %}
     </div>
+  </section>
 
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🚀 How to Use a Custom GPT</h2>
-      <p class="text-gray-700 mb-4">See how to apply GPTs to automate support, improve content, or scale training — tailored to your business.</p>
-      <a href="/how-to-use-a-custom-gpt.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
+  <!-- INDUSTRY SECTION -->
+  <section id="industries" class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">🏭 GPTs by Industry</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% assign industries = "gpt-in-ecommerce,gpt-in-education,gpt-in-hr,gpt-in-legal,gpt-in-marketing-seo,gpt-in-product-development,gpt-for-data-analysis,gpt-in-multilingual-support" | split: "," %}
+      {% for slug in industries %}
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+        {% assign label = slug | replace: "gpt-in-", "" | replace: "gpt-for-", "" | capitalize %}
+        <h2 class="text-xl font-bold text-blue-700 mb-2">GPTs in {{ label }}</h2>
+        <p class="text-gray-700 mb-4">How GPTs are transforming the {{ label | downcase }} sector with automation and AI insight.</p>
+        <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Explore</a>
+      </div>
+      {% endfor %}
     </div>
+  </section>
 
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">💡 Top GPT Use Cases</h2>
-      <p class="text-gray-700 mb-4">Explore examples of GPTs powering support bots, research tools, training assistants, and creative writing.</p>
-      <a href="/gpt-use-cases-for-business.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
+  <!-- DEEP DIVES SECTION -->
+  <section id="deep-dives" class="mb-16">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">🧠 Strategy & Insights</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% assign deep_dives = "sector-specific-agentic-systems,gpts-in-startups,external-gpt-applications,internal-gpt-knowledge-management,who-benefits-from-custom-gpt-tools" | split: "," %}
+      {% for slug in deep_dives %}
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ slug | replace: "-", " " | capitalize | replace: "Gpt", "GPT" }}</h2>
+        <p class="text-gray-700 mb-4">In-depth exploration of GPT applications, deployment strategies, and business value.</p>
+        <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Read More</a>
+      </div>
+      {% endfor %}
     </div>
+  </section>
 
- <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-  <h2 class="text-xl font-bold text-blue-700 mb-2">🛡️ Claude Apps for Teams</h2>
-  <p class="text-gray-700 mb-4">Build secure Claude-powered tools for sensitive workflows, knowledge bases, and enterprise use cases.</p>
-  <a href="/claude-custom-gpts.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Explore Claude Apps</a>
-</div>
-
-<div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-  <h2 class="text-xl font-bold text-blue-700 mb-2">🧠 GPTs vs Agentic AI</h2>
-  <p class="text-gray-700 mb-4">Learn the difference between GPTs and autonomous agentic systems — and when your business might want each.</p>
-  <a href="/gpt-vs-agentic-ai.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-</div>
-
-
-    <!-- Industry Use Cases -->
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🛒 GPTs in E-commerce</h2>
-      <p class="text-gray-700 mb-4">Personalize shopping, manage support, and streamline product discovery with AI-powered experiences.</p>
-      <a href="/gpt-in-ecommerce.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">📚 GPTs in Education</h2>
-      <p class="text-gray-700 mb-4">Enable personalized tutoring, curriculum support, and course content generation at scale.</p>
-      <a href="/gpt-in-education.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">💼 GPTs in HR</h2>
-      <p class="text-gray-700 mb-4">Automate resume screening, interview scheduling, and employee onboarding with AI support.</p>
-      <a href="/gpt-in-hr.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🔐 GPTs in Legal</h2>
-      <p class="text-gray-700 mb-4">Draft legal documents, automate intake forms, and streamline compliance workflows.</p>
-      <a href="/gpt-in-legal.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">📈 GPTs in Marketing & SEO</h2>
-      <p class="text-gray-700 mb-4">Generate on-brand copy, improve SEO, and scale personalized campaigns with GPT-powered tools.</p>
-      <a href="/gpt-in-marketing-seo.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🛠️ GPTs in Product Development</h2>
-      <p class="text-gray-700 mb-4">Draft specs, summarize user research, and refine product strategy faster with AI assistants.</p>
-      <a href="/gpt-in-product-development.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🌍 GPTs for Multilingual Support</h2>
-      <p class="text-gray-700 mb-4">Translate FAQs, handle global support queries, and localize documentation automatically.</p>
-      <a href="/gpt-in-multilingual-support.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">📊 GPTs for Data Analysis</h2>
-      <p class="text-gray-700 mb-4">Use GPTs to explain trends, summarize reports, and generate visual insights from structured data.</p>
-      <a href="/gpt-for-data-analysis.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
-    </div>
-
-    <!-- Blog Pages -->
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🏭 Sector-Specific Agentic Systems</h2>
-      <p class="text-gray-700 mb-4">Explore how AI agents are being applied in finance, legal, media, and healthcare.</p>
-      <a href="/sector-specific-agentic-systems.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Read More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🚀 GPTs in Startup Spaces</h2>
-      <p class="text-gray-700 mb-4">How GPTs thrive in low-structure, high-impact environments to support agile teams and fast pivots.</p>
-      <a href="/gpts-in-startups.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Read More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🌍 External GPT Use Cases</h2>
-      <p class="text-gray-700 mb-4">From customer service to branded assistants — see how companies are using GPTs externally.</p>
-      <a href="/external-gpt-applications.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Read More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🏢 Internal GPT Use Cases</h2>
-      <p class="text-gray-700 mb-4">Discover how companies use GPTs for internal documentation, onboarding, and team productivity.</p>
-      <a href="/internal-gpt-knowledge-management.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Read More</a>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-      <h2 class="text-xl font-bold text-blue-700 mb-2">🔍 Who Can Benefit from GPTs?</h2>
-      <p class="text-gray-700 mb-4">Learn which teams and professionals gain the most from custom GPT tools and AI workflows.</p>
-      <a href="/who-benefits-from-custom-gpt-tools.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Read More</a>
-    </div>
-
-  </div>
 </main>
