@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Learn About Custom GPTs & Claude Apps
-description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI tools for business automation, content creation, and internal knowledge systems.
+description: Learn how to build and deploy Custom GPTs and Claude Apps for marketing, HR, education, and more. Train Claude agents, automate business workflows, and scale content with AI tools.
 ---
 
 {% assign titles = {
@@ -25,6 +25,25 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
   "who-benefits-from-custom-gpt-tools": "Who Can Benefit from GPTs?"
 } %}
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Learn About Custom GPTs & Claude Apps",
+  "itemListElement": [
+    {% assign all_slugs = "what-is-a-gpt,how-to-use-a-custom-gpt,gpt-use-cases-for-business,claude-custom-gpts,gpt-vs-agentic-ai,gpt-in-ecommerce,gpt-in-education,gpt-in-hr,gpt-in-legal,gpt-in-marketing-seo,gpt-in-product-development,gpt-for-data-analysis,gpt-in-multilingual-support,sector-specific-agentic-systems,gpts-in-startups,external-gpt-applications,internal-gpt-knowledge-management,who-benefits-from-custom-gpt-tools" | split: "," %}
+    {% for slug in all_slugs %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": "{{ titles[slug] }}",
+      "url": "https://yourcustomgpt.io/{{ slug }}.html"
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+
 <main class="max-w-6xl mx-auto px-6 py-16">
   <div class="text-sm text-blue-600 mb-6">
     <a href="/" class="hover:underline">← Back to Home</a>
@@ -33,6 +52,7 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
   <h1 class="text-5xl font-bold text-center mb-6">📚 Learn About Custom GPTs & Claude Apps</h1>
   <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
     Explore real-world use cases, technical breakdowns, and practical guides to using <a href="/what-is-a-gpt.html" class="text-blue-600 hover:underline">Custom GPTs</a> and <a href="/claude-custom-gpts.html" class="text-blue-600 hover:underline">Claude Apps</a> across your business.
+    See how <a href="/sector-specific-agentic-systems.html" class="text-blue-600 hover:underline">Claude agents</a> can power secure, automated systems.
   </p>
 
   <!-- Quick Jump Nav -->
@@ -48,8 +68,8 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
     <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
       {% assign core_modules = "what-is-a-gpt,how-to-use-a-custom-gpt,gpt-use-cases-for-business,claude-custom-gpts,gpt-vs-agentic-ai" | split: "," %}
       {% for slug in core_modules %}
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h2>
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h3>
         <p class="text-gray-700 mb-4">Learn the basics and core strategies behind using GPTs and Claude effectively.</p>
         <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
       </div>
@@ -63,8 +83,8 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
     <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
       {% assign industries = "gpt-in-ecommerce,gpt-in-education,gpt-in-hr,gpt-in-legal,gpt-in-marketing-seo,gpt-in-product-development,gpt-for-data-analysis,gpt-in-multilingual-support" | split: "," %}
       {% for slug in industries %}
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h2>
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h3>
         <p class="text-gray-700 mb-4">How GPTs are transforming the {{ titles[slug] | remove: 'GPTs in ' | remove: 'GPTs for ' | downcase }} sector with automation and AI insight.</p>
         <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Explore</a>
       </div>
@@ -78,13 +98,12 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
     <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
       {% assign deep_dives = "sector-specific-agentic-systems,gpts-in-startups,external-gpt-applications,internal-gpt-knowledge-management,who-benefits-from-custom-gpt-tools" | split: "," %}
       {% for slug in deep_dives %}
-      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
-        <h2 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h2>
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">{{ titles[slug] }}</h3>
         <p class="text-gray-700 mb-4">In-depth exploration of GPT applications, deployment strategies, and business value.</p>
         <a href="/{{ slug }}.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Read More</a>
       </div>
       {% endfor %}
     </div>
   </section>
-
 </main>
