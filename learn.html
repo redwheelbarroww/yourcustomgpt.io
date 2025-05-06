@@ -4,6 +4,27 @@ title: Learn About Custom GPTs & Claude Apps
 description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI tools for business automation, content creation, and internal knowledge systems.
 ---
 
+{% assign titles = {
+  "what-is-a-gpt": "What Is a GPT?",
+  "how-to-use-a-custom-gpt": "How to Use a Custom GPT",
+  "gpt-use-cases-for-business": "Top GPT Use Cases",
+  "claude-custom-gpts": "Claude Apps for Teams",
+  "gpt-vs-agentic-ai": "GPTs vs Agentic AI",
+  "gpt-in-ecommerce": "GPTs in E-commerce",
+  "gpt-in-education": "GPTs in Education",
+  "gpt-in-hr": "GPTs in HR",
+  "gpt-in-legal": "GPTs in Legal",
+  "gpt-in-marketing-seo": "GPTs in Marketing & SEO",
+  "gpt-in-product-development": "GPTs in Product Development",
+  "gpt-for-data-analysis": "GPTs for Data Analysis",
+  "gpt-in-multilingual-support": "GPTs for Multilingual Support",
+  "sector-specific-agentic-systems": "Sector-Specific Agentic Systems",
+  "gpts-in-startups": "GPTs in Startup Spaces",
+  "external-gpt-applications": "External GPT Use Cases",
+  "internal-gpt-knowledge-management": "Internal GPT Use Cases",
+  "who-benefits-from-custom-gpt-tools": "Who Can Benefit from GPTs?"
+} %}
+
 <main class="max-w-6xl mx-auto px-6 py-16">
   <div class="text-sm text-blue-600 mb-6">
     <a href="/" class="hover:underline">← Back to Home</a>
@@ -24,14 +45,7 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
   <!-- FOUNDATIONS SECTION -->
   <section id="foundations" class="mb-16">
     <h2 class="text-3xl font-bold text-gray-900 mb-6">📘 Foundations</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% assign titles = {
-        "what-is-a-gpt": "What Is a GPT?",
-        "how-to-use-a-custom-gpt": "How to Use a Custom GPT",
-        "gpt-use-cases-for-business": "Top GPT Use Cases",
-        "claude-custom-gpts": "Claude Apps for Teams",
-        "gpt-vs-agentic-ai": "GPTs vs Agentic AI"
-      } %}
+    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
       {% assign core_modules = "what-is-a-gpt,how-to-use-a-custom-gpt,gpt-use-cases-for-business,claude-custom-gpts,gpt-vs-agentic-ai" | split: "," %}
       {% for slug in core_modules %}
       <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
@@ -46,17 +60,7 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
   <!-- INDUSTRY SECTION -->
   <section id="industries" class="mb-16">
     <h2 class="text-3xl font-bold text-gray-900 mb-6">🏭 GPTs by Industry</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% assign titles = {
-        "gpt-in-ecommerce": "GPTs in E-commerce",
-        "gpt-in-education": "GPTs in Education",
-        "gpt-in-hr": "GPTs in HR",
-        "gpt-in-legal": "GPTs in Legal",
-        "gpt-in-marketing-seo": "GPTs in Marketing & SEO",
-        "gpt-in-product-development": "GPTs in Product Development",
-        "gpt-for-data-analysis": "GPTs for Data Analysis",
-        "gpt-in-multilingual-support": "GPTs for Multilingual Support"
-      } %}
+    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
       {% assign industries = "gpt-in-ecommerce,gpt-in-education,gpt-in-hr,gpt-in-legal,gpt-in-marketing-seo,gpt-in-product-development,gpt-for-data-analysis,gpt-in-multilingual-support" | split: "," %}
       {% for slug in industries %}
       <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
@@ -71,14 +75,7 @@ description: Discover how to build and deploy Custom GPTs, Claude Apps, and AI t
   <!-- DEEP DIVES SECTION -->
   <section id="deep-dives" class="mb-16">
     <h2 class="text-3xl font-bold text-gray-900 mb-6">🧠 Strategy & Insights</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {% assign titles = {
-        "sector-specific-agentic-systems": "Sector-Specific Agentic Systems",
-        "gpts-in-startups": "GPTs in Startup Spaces",
-        "external-gpt-applications": "External GPT Use Cases",
-        "internal-gpt-knowledge-management": "Internal GPT Use Cases",
-        "who-benefits-from-custom-gpt-tools": "Who Can Benefit from GPTs?"
-      } %}
+    <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
       {% assign deep_dives = "sector-specific-agentic-systems,gpts-in-startups,external-gpt-applications,internal-gpt-knowledge-management,who-benefits-from-custom-gpt-tools" | split: "," %}
       {% for slug in deep_dives %}
       <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
