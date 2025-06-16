@@ -54,7 +54,7 @@
   <section id="form-section">
     <h2>Submit Your GPT Details</h2>
     <p>Please complete payment first, then submit this form to begin building your custom GPT.</p>
-    <form action="https://formspree.io/f/xanjjklk" method="POST">
+    <form id="gpt-builder-form" action="https://formspree.io/f/xanjjklk" method="POST">
 
       <label for="email"><strong>Your Email (to receive your GPT):</strong></label><br />
       <input type="email" name="email" id="email" required placeholder="you@example.com" /><br /><br />
@@ -95,5 +95,24 @@
     <a href="https://buy.stripe.com/test_eVqeV681UbqjfHtcgdew800" class="cta-button">Pay Now – $97</a>
     <p>Or <a href="/contact">contact us</a> for white-glove GPT setup ($297)</p>
   </footer>
+
+  <script>
+    const form = document.getElementById('gpt-builder-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = "/gpt-builder-thank-you.html";
+        } else {
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
