@@ -1,0 +1,55 @@
+---
+layout: default
+title: GPT Builder – Submit Your Details
+description: Provide your voice samples and use case to receive a personalized GPT built just for you.
+---
+
+<section class="text-center mb-10">
+  <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-4">Submit Your GPT Details</h1>
+  <p class="text-lg text-gray-700">Thanks for your purchase! Fill out the short form below so we can build your custom GPT in your voice.</p>
+</section>
+
+<form id="gpt-builder-form" action="https://formspree.io/f/xanjjklk" method="POST" class="space-y-6 max-w-2xl mx-auto">
+  <label class="block">
+    <span class="font-semibold">Your Email (to receive your GPT):</span>
+    <input type="email" name="email" required placeholder="you@example.com" class="w-full border border-gray-300 rounded px-4 py-2 mt-1" />
+  </label>
+
+  <label class="block">
+    <span class="font-semibold">1. What should your GPT help with?</span>
+    <textarea name="use_case" rows="4" required placeholder="E.g. write outreach emails, respond to cold DMs, draft proposals" class="w-full border border-gray-300 rounded px-4 py-2 mt-1"></textarea>
+  </label>
+
+  <label class="block">
+    <span class="font-semibold">2. Paste 1–2 writing samples that sound like you:</span>
+    <textarea name="voice_sample" rows="6" required placeholder="E.g. an email, comment, or social post that captures your tone" class="w-full border border-gray-300 rounded px-4 py-2 mt-1"></textarea>
+  </label>
+
+  <label class="block">
+    <span class="font-semibold">3. Give your GPT a real task to handle:</span>
+    <textarea name="example_prompt" rows="4" required placeholder="E.g. 'Write a reply to a potential client asking for my rates'" class="w-full border border-gray-300 rounded px-4 py-2 mt-1"></textarea>
+  </label>
+
+  <input type="hidden" name="form_name" value="GPT Builder Intake" />
+
+  <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl">Send & Build My GPT</button>
+</form>
+
+<script>
+  const form = document.getElementById('gpt-builder-form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = "/gpt-builder-thank-you.html";
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    });
+  });
+</script>
